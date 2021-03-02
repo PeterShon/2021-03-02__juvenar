@@ -1,0 +1,16 @@
+.promo-section {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  background-image: url(../img/bg-sea.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__container {
+
+  }
+  &__inner {
+    padding: 20px 0;
+    grid-row-gap: 30px;
+    height: 1920px;
+  }
+}

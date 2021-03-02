@@ -10,12 +10,6 @@ section.main-elements
           input(type="checkbox")
           span.checkbox__fake
           | этот чекбокс имеет кликабельный текст
-      .main-elements__box.main-elements__box_breadcrumbs
-        ul.main-elements__breadcrumbs.breadcrumbs
-          - var links = [['#', 'крошка #1'], ['#', 'крошка #2'], ['#', 'крошка #3'], ['#', 'крошка #4'], ['#', 'крошка #5'], ['#', 'Корочка']]
-          each val, index in links
-            li
-              a(href = val[0])= val[1]
       .main-elements__box.main-elements__box_input
         .main-elements__input.input
           input.input__body(type="text" placeholder=' ')

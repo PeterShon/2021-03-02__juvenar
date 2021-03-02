@@ -3,16 +3,23 @@
   justify-content: center;
   align-items: center;
 
-  height: 60px;
+  width: 331px; height: 77px;
   padding: 10px 30px;
 
-  border: 1px dotted black;
+  background: radial-gradient(116.32% 119.44% at 47.35% -22.92%, #3784FF 0.01%, #565DFF 100%);
+  box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+  border-radius: 500px;
+  border-bottom: 5px solid #1238FF;
 
-  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
   text-align: center;
 
   cursor: pointer;
+
   &:hover {
-    border: 1px solid black;
+    background: radial-gradient(116.32% 119.44% at 47.35% -22.92%, #3784FF 0.01%, #474dff 100%);
+    border-bottom: 5px solid #0831ff;
   }
 }

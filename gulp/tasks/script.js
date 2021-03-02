@@ -6,11 +6,6 @@ const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack
 const eslint = require('gulp-eslint')
 
 module.exports = function script() {
-  //gulp.src('src/js/**/*')
-  //  .pipe(gulp.dest('docs/js/'))
-
-  gulp.src('src/js/video-yt.js')
-    .pipe(gulp.dest('docs/js'))
 
   return gulp.src('src/js/main.js')
     .pipe(plumber())
@@ -26,7 +21,7 @@ module.exports = function script() {
       devtool: "source-map", //убирает минификацию кода, делает его многострочным
       output: {
         filename: '[name].js',
-      }, //'[name].min.js' при вяключенном минификаторе
+      }, //'[name].min.js' при выключенном минификаторе
       module: {
         rules: [
           {

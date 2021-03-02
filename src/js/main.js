@@ -9,12 +9,8 @@ import { tabs } from '../js/tabs.js'
 import { header } from '../js/header.js'
 import { select } from '../js/select.js'
 import { feedback } from '../js/feedback.js'
-import { stairs } from '../js/stairs.js'
-import { video } from '../js/video.js'
 import { animAppear } from '../js/anim-appear.js'
-import { scrollParallax } from '../js/scroll-parallax.js'
 import { tilt } from '../js/tilt.js'
-require(`fslightbox`)
 require(`../local_modules/choices.js/public/assets/scripts/choices.min`)
 require(`../local_modules/vanilla-tilt/dist/vanilla-tilt.min`)
 
@@ -37,9 +33,6 @@ function start() {
   header()
   select()
   feedback()
-  stairs()
-  video()
   animAppear()
-  scrollParallax()
   tilt()
 }

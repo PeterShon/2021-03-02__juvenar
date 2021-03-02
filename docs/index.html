@@ -12,53 +12,44 @@
     <header class="header js_lock-padding">
       <div class="header__container container">
         <div class="header__inner inner"><a class="header__logo" href="#/?utm_source=istochnik&amp;utm_medium=organic&amp;utm_campaign=test_of_utm"><img class="header__logo-img" src="./img/logo.png" alt="logo"></a>
+          <div class="header__lang">
+            <select class="header__lang-select selecter" id="header__lang-select" name="select">
+              <option value="RU"></option>
+              <option value="KZ"></option>
+              <option value="EN"></option>
+            </select>
+          </div>
           <nav class="header__nav">
             <ul class="header__nav-list">
-              <li class="header__dropdown dropdown">
-                <button class="dropdown__btn">Меню</button>
-                <div class="dropdown__body">
-                  <ul class="dropdown__list">
-                    <li><a href="#">Основные элементы</a></li>
-                    <li><a href="#">Слайдер</a></li>
-                    <li><a href="#">Табы</a></li>
-                    <li><a href="#">Галерея</a></li>
-                    <li><a href="#">Форма</a></li>
-                    <li><a href="#">Чекпоинты</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="#">Пункт 1</a></li>
-              <li><a href="#">Пункт 2</a></li>
-              <li><a href="#">Пункт 3</a></li>
-              <li><a href="#">Пункт 4</a></li>
-              <li><a href="#">Пункт 5</a></li>
+              <li><a href="#">Состав</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Вопросы—ответы</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
           </nav>
-          <div class="header__widgets">
-            <div class="header__widgets-box header__widgets-box_first">
-              <div class="header__widget1"></div>
-              <div class="header__burger burger">
-                <div class="burger__button-wrapper">
-                  <div class="burger__button">
-                    <div class="burger__button-el burger__button-el_top"></div>
-                    <div class="burger__button-el burger__button-el_middle"></div>
-                    <div class="burger__button-el burger__button-el_bottom"></div>
-                  </div>
+          <div class="header__widgets"><a class="header__whatsapp" href="https://wa.me/380951580858"> + 380 95 158 0858</a><a class="header__button button" href="#">Заказать комплекс</a>
+            <div class="header__burger burger">
+              <div class="burger__button-wrapper">
+                <div class="burger__button">
+                  <div class="burger__button-el burger__button-el_top"></div>
+                  <div class="burger__button-el burger__button-el_middle"></div>
+                  <div class="burger__button-el burger__button-el_bottom"></div>
                 </div>
-                <div class="burger__body">
-                  <div class="burger__container container">
-                    <div class="burger__inner inner">
-                      <nav class="burger__nav">
-                        <ul class="burger__nav-list">
-                          <li><a href="#">Основные элементы</a></li>
-                          <li><a href="#">Слайдер</a></li>
-                          <li><a href="#">Табы</a></li>
-                          <li><a href="#">Галерея</a></li>
-                          <li><a href="#">Форма</a></li>
-                          <li><a href="#">Чекпоинты</a></li>
-                        </ul>
-                      </nav>
-                    </div>
+              </div>
+              <div class="burger__body">
+                <div class="burger__container container">
+                  <div class="burger__inner inner">
+                    <nav class="burger__nav">
+                      <ul class="burger__nav-list">
+                        <li><a href="#">Основные элементы</a></li>
+                        <li><a href="#">Слайдер</a></li>
+                        <li><a href="#">Табы</a></li>
+                        <li><a href="#">Галерея</a></li>
+                        <li><a href="#">Форма</a></li>
+                        <li><a href="#">Чекпоинты</a></li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
               </div>
@@ -68,6 +59,11 @@
       </div>
     </header>
     <main class="main">
+      <section class="promo-section">
+        <div class="promo-section__container container">
+          <div class="promo-section__inner inner"></div>
+        </div>
+      </section>
       <section class="main-elements">
         <div class="main-elements__container container">
           <div class="main-elements__inner inner">
@@ -79,16 +75,6 @@
               <label class="main-elements__checkbox checkbox">
                 <input type="checkbox"><span class="checkbox__fake"></span>этот чекбокс имеет кликабельный текст
               </label>
-            </div>
-            <div class="main-elements__box main-elements__box_breadcrumbs">
-              <ul class="main-elements__breadcrumbs breadcrumbs">
-                <li><a href="#">крошка #1</a></li>
-                <li><a href="#">крошка #2</a></li>
-                <li><a href="#">крошка #3</a></li>
-                <li><a href="#">крошка #4</a></li>
-                <li><a href="#">крошка #5</a></li>
-                <li><a href="#">Корочка</a></li>
-              </ul>
             </div>
             <div class="main-elements__box main-elements__box_input">
               <div class="main-elements__input input">
@@ -213,18 +199,6 @@
           </div>
         </div>
       </section>
-      <section class="gallery-section">
-        <div class="gallery-section__container container">
-          <div class="gallery-section__inner inner">
-            <div class="gallery-section__title title">
-              <h2 class="_an-i _nra _an-up">Галерея</h2>
-            </div>
-            <div class="gallery-section__box gallery-section__box_gallery">
-              <div class="gallery-section__gallery gallery"><a class="gallery__link" data-fslightbox href="./img/photo1.jpg"><img src="./img/photo1.jpg" alt="photo"></a><a class="gallery__link" data-fslightbox href="./img/photo2.jpg"><img src="./img/photo2.jpg" alt="photo"></a><a class="gallery__link" data-fslightbox href="./img/photo3.jpg"><img src="./img/photo3.jpg" alt="photo"></a><a class="gallery__link" data-fslightbox href="./img/photo4.jpg"><img src="./img/photo4.jpg" alt="photo"></a><a class="gallery__link" data-fslightbox href="./img/photo5.jpg"><img src="./img/photo5.jpg" alt="photo"></a><a class="gallery__link" data-fslightbox href="./img/photo6.jpg"><img src="./img/photo6.jpg" alt="photo"></a><a class="gallery__link" data-fslightbox href="./img/photo7.jpg"><img src="./img/photo7.jpg" alt="photo"></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="form-section">
         <div class="form-section__container container">
           <div class="form-section__inner inner">
@@ -311,182 +285,6 @@
           </div>
         </div>
       </section>
-      <section class="full-section">
-        <div class="full-section__container full-section__container_full container">
-          <div class="full-section__inner inner">
-            <div class="full-section__title title">
-              <h2 class="_an-i _nra _an-up">Шире некуда</h2>
-            </div>
-            <div class="full-section__box full-section__box_full">
-              <div class="full-section__full parallax">
-                <div class="parallax__text-box"><span class="parallax__text" data-mt="2.75" style="--fs: 0.93">SPACE</span><span class="parallax__text" data-mt="2.5" style="--fs: 0.94">SPACE</span><span class="parallax__text" data-mt="2.25" style="--fs: 0.95">SPACE</span><span class="parallax__text" data-mt="2" style="--fs: 0.96">SPACE</span><span class="parallax__text" data-mt="1.75" style="--fs: 0.97">SPACE</span><span class="parallax__text" data-mt="1.5" style="--fs: 0.98">SPACE</span><span class="parallax__text" data-mt="1.25" style="--fs: 0.99">SPACE</span><span class="parallax__text" data-mt="1" style="--fs: 1">SPACE</span></div>
-                <div class="parallax__star-box">
-                  <div class="parallax__star" style="--shine:.2;--x: 40%; --y: 18%; --str:1; --sz:1"></div>
-                  <div class="parallax__star" style="--shine:.3;--x: 78%; --y: 94%; --str:1; --sz:1"></div>
-                  <div class="parallax__star" style="--shine:.8;--x: 78%; --y: 4%; --str:.8; --sz:.8"></div>
-                  <div class="parallax__star" style="--shine:.9;--x: 31%; --y: 65%; --str:.8; --sz:.8"></div>
-                  <div class="parallax__star" style="--shine:.4;--x: 10%; --y: 32%; --str:.8; --sz:.8"></div>
-                  <div class="parallax__star" style="--shine:.3;--x: 18%; --y: 45%; --str:.6; --sz:.6"></div>
-                  <div class="parallax__star" style="--shine:.5;--x: 94%; --y: 38%; --str:.6; --sz:.6"></div>
-                  <div class="parallax__star" style="--shine:.7;--x: 2%; --y: 11%; --str:.6; --sz:.6"></div>
-                  <div class="parallax__star" style="--shine:.9;--x: 15%; --y: 69%; --str:.6; --sz:.6"></div>
-                  <div class="parallax__star" style="--shine:.1;--x: 20%; --y: 30%; --str:.4; --sz:.4"></div>
-                  <div class="parallax__star" style="--shine:.4;--x: 49%; --y: 74%; --str:.4; --sz:.4"></div>
-                  <div class="parallax__star" style="--shine:.5;--x: 11%; --y: 94%; --str:.4; --sz:.4"></div>
-                  <div class="parallax__star" style="--shine:.9;--x: 66%; --y: 14%; --str:.4; --sz:.4"></div>
-                  <div class="parallax__star" style="--shine:.6;--x: 78%; --y: 18%; --str:.4; --sz:.4"></div>
-                  <div class="parallax__star" style="--shine:.6;--x: 24%; --y: 66%; --str:.2; --sz:.2"></div>
-                  <div class="parallax__star" style="--shine:.7;--x: 83%; --y: 79%; --str:.2; --sz:.2"></div>
-                  <div class="parallax__star" style="--shine:.3;--x: 60%; --y: 44%; --str:.2; --sz:.2"></div>
-                  <div class="parallax__star" style="--shine:.4;--x: 20%; --y: 32%; --str:.2; --sz:.2"></div>
-                  <div class="parallax__star" style="--shine:.8;--x: 80%; --y: 46%; --str:.2; --sz:.2"></div>
-                  <div class="parallax__star" style="--shine:.9;--x: 94%; --y: 34%; --str:.2; --sz:.2"></div>
-                  <div class="parallax__star" style="--shine:.1;--x: 52%; --y: 97%; --str:.2; --sz:.2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="full-section__box full-section__box_full">
-              <div class="full-section__full scroll-parallax">
-                <div class="scroll-parallax__item scroll-parallax__item_1"></div>
-                <div class="scroll-parallax__item scroll-parallax__item_2"></div>
-                <div class="scroll-parallax__item scroll-parallax__item_3"></div>
-                <div class="scroll-parallax__item scroll-parallax__item_4"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="checks-section">
-        <div class="checks-section__container container">
-          <div class="checks-section__inner inner">
-            <div class="checks-section__title title">
-              <h2 class="_an-i _nra _an-up">Чексы</h2>
-            </div>
-            <div class="checks-section__box checks-section__box_stairs">
-              <div class="checks-section__stairs stairs">
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="1" style="--lvl:1">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Выбрать всё
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="2" style="--lvl:2">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Друг друга
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="2" style="--lvl:2">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Друг папы
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="2" style="--lvl:2">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Папа
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="3" style="--lvl:3">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Дочка
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="3" style="--lvl:3">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Сын
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="4" style="--lvl:4">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Внучка
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="4" style="--lvl:4">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Жучка
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="3" style="--lvl:3">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Приёмыш
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="4" style="--lvl:4">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Внук
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="4" style="--lvl:4">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Барсук
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="2" style="--lvl:2">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Генеральный ларька
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="3" style="--lvl:3">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Директор по закупкам
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="3" style="--lvl:3">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Директор по продажам
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="4" style="--lvl:4">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Начальник по продажам
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="5" style="--lvl:5">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Продавец-консультант
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="5" style="--lvl:5">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Кассир
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="5" style="--lvl:5">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Уборщица
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="6" style="--lvl:6">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Плюшевый мишка
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="4" style="--lvl:4">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Начальник по возвратам
-                </label>
-                <label class="stairs__lvl checkbox _an-i _nra _an-up" data-lvl="2" style="--lvl:2">
-                  <input type="checkbox"><span class="checkbox__fake"></span>Кто-то ещё
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="video-section">
-        <div class="video-section__container container">
-          <div class="video-section__inner inner">
-            <div class="video-section__title title">
-              <h2 class="_an-i _nra _an-up">Видео</h2>
-            </div>
-            <div class="video-section__box video-section__box_video">
-              <div class="video-section__video video video_stop">
-                <video class="video__field">
-                  <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
-                </video>
-                <div class="video__face"></div>
-                <div class="video__panel">
-                  <div class="video__playpause"></div>
-                  <div class="video__stop"></div>
-                  <div class="video__progress">
-                    <div class="video__progress-line"></div>
-                    <div class="video__target-line"></div>
-                  </div>
-                  <div class="video__volume"></div>
-                </div>
-              </div>
-            </div>
-            <div class="video-section__box video-section__box_video">
-              <div class="video-section__video video video_stop">
-                <video class="video__field">
-                  <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
-                </video>
-                <div class="video__face"></div>
-                <div class="video__panel">
-                  <div class="video__playpause"></div>
-                  <div class="video__stop"></div>
-                  <div class="video__progress">
-                    <div class="video__progress-line"></div>
-                    <div class="video__target-line"></div>
-                  </div>
-                  <div class="video__volume"></div>
-                </div>
-              </div>
-            </div>
-            <div class="video-section__box video-section__box_video">
-              <div class="video-section__video video-yt">
-                <div class="video-yt__field" data-video="_DYAnU3H7RI"></div>
-                <div class="video-yt__face"></div>
-              </div>
-            </div>
-            <div class="video-section__box video-section__box_video">
-              <div class="video-section__video video-yt">
-                <div class="video-yt__field" data-video="M7lc1UVf-VE"></div>
-                <div class="video-yt__face"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="tilt-section">
         <div class="tilt-section__container tilt-section__container_tilt container">
           <div class="tilt-section__inner inner">
@@ -550,6 +348,5 @@
       </div>
     </footer>
     <script src="js/main.js" type="module"></script>
-    <script src="js/video-yt.js"></script>
   </body>
 </html>
