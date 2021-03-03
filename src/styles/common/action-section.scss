@@ -1,0 +1,112 @@
+.action-section {
+  position: relative;
+  margin-top: -70px;
+  &__container {
+
+  }
+  &__inner {
+    padding: 75px 0 223px;
+    grid-row-gap: 30px;
+  }
+  &__title {
+    grid-column: 1/-1;
+    display: grid;
+    width: 100%;
+    color: #333333;
+  }
+  &__bouble {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    grid-column: 1/-1;
+    justify-self: center;
+    width: 633px; height: 633px;
+    margin-top: 86px;
+
+    border: 1px solid #E1E1E1;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 57px rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+  }
+  &__main-title {
+    width: 343px; height: 178px;
+    margin-bottom: 75px;
+
+    transition: 0.9s;
+    & img {
+      width: 100%; height: 100%;
+      object-position: center;
+      object-fit: contain;
+    }
+    .action-section__bouble:hover & {
+      transform: scale(1.03);
+    }
+  }
+  &__button {
+    position: relative;
+    z-index: 2;
+
+    animation-name: fly;
+    animation-delay: var(--delay);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2.3s;
+  }
+  &__el {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    width: 533px; height: 119px;
+    padding: 13px 45px 13px 16px;
+
+    background: linear-gradient(160deg, #fff, #f0f0f0);
+    border-bottom: 7px solid #dddddd;
+    border-radius: 90px;
+
+    left: var(--left);
+    top: var(--top);
+
+    animation-name: fly;
+    animation-delay: var(--delay);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2.3s;
+  }
+  @keyframes fly {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  &__icon {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87px; height: 87px;
+    max-width: 87px;
+    margin-right: 28px;
+
+    border-radius: 50%;
+    overflow: hidden;
+    & img {
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+  }
+  &__note {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

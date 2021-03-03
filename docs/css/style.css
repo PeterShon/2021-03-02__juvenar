@@ -1358,8 +1358,6 @@ select:-webkit-autofill:focus {
 
 .promo-section {
   background: url(../img/bg-sea.webp) no-repeat center -70px/cover;
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
 }
 
 .promo-section__inner {
@@ -1376,7 +1374,7 @@ select:-webkit-autofill:focus {
 }
 
 .promo-section__title {
-  background: url(../img/main-title.svg) no-repeat center/contain;
+  background: url(../img/main-title.svg) no-repeat center left/contain;
   width: 620px;
   height: 236px;
   font-size: 0;
@@ -1414,8 +1412,8 @@ select:-webkit-autofill:focus {
 
 .promo-section__facts {
   position: absolute;
-  bottom: 223px;
-  right: 197px;
+  bottom: 195px;
+  right: 166px;
   width: 695px;
 }
 
@@ -1495,10 +1493,150 @@ select:-webkit-autofill:focus {
   margin-bottom: 26px;
 }
 
-.promo-section__facts-list ul li:hover {
-  text-decoration: line-through;
-  -webkit-text-decoration-color: #FF2828;
-  text-decoration-color: #FF2828;
+.action-section {
+  position: relative;
+  margin-top: -70px;
+}
+
+.action-section__inner {
+  padding: 75px 0 223px;
+  grid-row-gap: 30px;
+}
+
+.action-section__title {
+  grid-column: 1/-1;
+  display: grid;
+  width: 100%;
+  color: #333333;
+}
+
+.action-section__bouble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  grid-column: 1/-1;
+  justify-self: center;
+  width: 633px;
+  height: 633px;
+  margin-top: 86px;
+  border: 1px solid #E1E1E1;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 57px rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+}
+
+.action-section__main-title {
+  width: 343px;
+  height: 178px;
+  margin-bottom: 75px;
+  transition: 0.9s;
+}
+
+.action-section__main-title img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+  object-position: center;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.action-section__bouble:hover .action-section__main-title {
+  transform: scale(1.03);
+}
+
+.action-section__button {
+  position: relative;
+  z-index: 2;
+  -webkit-animation-name: fly;
+  animation-name: fly;
+  -webkit-animation-delay: var(--delay);
+  animation-delay: var(--delay);
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 2.3s;
+  animation-duration: 2.3s;
+}
+
+.action-section__el {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 533px;
+  height: 119px;
+  padding: 13px 45px 13px 16px;
+  background: linear-gradient(160deg, #fff, #f0f0f0);
+  border-bottom: 7px solid #dddddd;
+  border-radius: 90px;
+  left: var(--left);
+  top: var(--top);
+  -webkit-animation-name: fly;
+  animation-name: fly;
+  -webkit-animation-delay: var(--delay);
+  animation-delay: var(--delay);
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 2.3s;
+  animation-duration: 2.3s;
+}
+
+@-webkit-keyframes fly {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.action-section__icon {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 87px;
+  height: 87px;
+  max-width: 87px;
+  margin-right: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.action-section__icon img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.action-section__note {
+  font: 500 20px 'Roboto', sans-serif;
 }
 
 .main-elements {
@@ -1891,6 +2029,15 @@ select:-webkit-autofill:focus {
   color: white;
 }
 
+.drops {
+  background: url(../img/drops.png) repeat center/auto;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 /* burger - vars*/
 
 * {
@@ -2197,7 +2344,7 @@ select:-webkit-autofill:focus {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  margin: 0 0 30px;
+  margin: 0 0 0px;
 }
 
 .title_less > * {

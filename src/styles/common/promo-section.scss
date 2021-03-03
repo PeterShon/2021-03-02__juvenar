@@ -1,6 +1,4 @@
 .promo-section {
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
   background-image: url(../img/bg-sea.webp);
   background-position: center -70px;
   background-repeat: no-repeat;
@@ -25,7 +23,7 @@
 
     background-image: url(../img/main-title.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center left;
     background-size: contain;
 
     font-size: 0;
@@ -51,7 +49,6 @@
     top: 36%;
     left: -120px;
     width: 974px;
-    //height: 327px;
   }
   &__compare {
     position: relative;
@@ -62,7 +59,7 @@
   &__facts {
 
     position: absolute;
-    bottom: 223px; right: 197px;
+    bottom: 195px; right: 166px;
     
     width: 695px;
   }
@@ -138,10 +135,6 @@
         }
         &:not(:last-child) {
           margin-bottom: 26px;
-        }
-        &:hover {
-          text-decoration: line-through;
-          text-decoration-color: #FF2828;
         }
       }
     }
