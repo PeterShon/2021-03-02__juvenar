@@ -109,37 +109,6 @@ export function feedback() {
         js_medium.value = query.match(medium_regexp)
         js_campaign.value = query.match(campaing_regexp)
       }
-
-      //обработка файла
-      if (form.querySelector('.file-stiller__input')) {
-        const formImage = form.querySelector('.file-stiller__input')
-        const formPreview = form.querySelector('.file-stiller__picture-wrapper')
-
-        formImage.addEventListener('change', () => {
-          uploadFile(formImage.files[0])
-        })
-
-        function uploadFile(file) {
-          if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
-            alert('Разрешены только изображения.')
-            formImage.value = ''
-            return
-          }
-          if (file.size > 2 * 1024 * 1024) {
-            alert('Файл должен быть менее 2мб')
-            return
-          }
-
-          var reader = new FileReader();
-          reader.onload = function (e) {
-            formPreview.innerHTML = `<img class="file-stiller__picture" src="${e.target.result}" alt="picture">`
-          }
-          reader.onerror = function (e) {
-            alert('Ошибка загрузки изображения')
-          }
-          reader.readAsDataURL(file)
-        }
-      }
     }
   }
 }

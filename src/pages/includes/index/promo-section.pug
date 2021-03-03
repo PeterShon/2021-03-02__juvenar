@@ -1,4 +1,39 @@
 section.promo-section
   .promo-section__container.container
     .promo-section__inner.inner
-        
+        .promo-section__main-title
+          h1.promo-section__title Marine Juvena Collagen Peptides
+          .promo-section__description
+            p Нутрикосметика на основе пептидов морского коллагена <br> для сохранения <p>здоровья и молодости вашей кожи, волос и ногтей</p>
+        .promo-section__feedback.form.form_horizontal.js_form-to-email
+          .form__header.title.title_less
+            h2._an-i._nra._an-up <p>Скидка 10 %</p> при использовании <br>промокода <p>Juvena1</p> на перый заказ
+          .form__body
+            input.form__utm.js_source(type="text" name='utm-source')
+            input.form__utm.js_medium(type="text" name='utm-medium')
+            input.form__utm.js_campaign(type="text" name='utm-campaign')
+            input.form__locker.js_locker(type="text")
+            .form__input.form__input_name.input
+              input.input__body.js_req(type="text" name='name' placeholder = ' ')
+              .input__placeholder Имя*
+            .form__input.form__input_phone.input
+              input.input__body.js_req(type="text" name='telephone' placeholder = ' ')
+              .input__placeholder Телефон*
+            button.form__button.button Заказать комплекс
+        .promo-section__compare.compare
+          .compare__container
+            .compare__img 
+              img(src="./img/before.jpg", alt="before")
+            .compare__img.compare__overlay
+              img(src="./img/after.jpg", alt="after")
+        .promo-section__facts 
+          h2.promo-section__facts-h С возрастом в нашем организме происходят необратимые изменения
+          p.promo-section__facts-p Уже с 20 лет мы начинаем терять около 1,5% нашего коллагена в год, снижается выработка гиалуроновой кислоты, витамина В6, магния и цинка.
+          .promo-section__facts-list
+            p Это приводит к:
+            ul
+              li старению кожных покровов и сухости;
+              li появлению морщин;
+              li образованию пигментации;
+              li ухудшению состояния волос и ногтей; 
+              li снижению гибкости суставов;

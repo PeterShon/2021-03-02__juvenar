@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   background: linear-gradient(180deg, #A3DCFF 0%, rgba(163, 220, 255, 0) 181.2%);
+  backdrop-filter: blur(4px);
   &__conteiner {
     height: 100%;
   }

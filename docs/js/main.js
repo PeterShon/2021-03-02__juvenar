@@ -2170,6 +2170,130 @@ function burger() {
 
 /***/ }),
 
+/***/ "./src/js/compare.js":
+/*!***************************!*\
+  !*** ./src/js/compare.js ***!
+  \***************************/
+/*! exports provided: compare */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compare", function() { return compare; });
+/* comapre */
+function compare() {
+  var x, i;
+  /*find all elements with an "overlay" class:*/
+
+  x = document.getElementsByClassName("compare__overlay");
+
+  for (i = 0; i < x.length; i++) {
+    /*once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function:*/
+    compareImages(x[i]);
+  }
+
+  function compareImages(img) {
+    var slider,
+        img,
+        clicked = 0,
+        w,
+        h;
+    /*get the width and height of the img element*/
+
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /*set the width of the img element to 50%:*/
+
+    img.style.width = w / 2 + 3 - 20 + "px";
+    /*create slider:*/
+
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "compare__slider");
+    slider.innerHTML = '<&nbsp;&nbsp;>';
+    /*insert slider*/
+
+    img.parentElement.insertBefore(slider, img);
+    /*position the slider in the middle:*/
+    /////////////slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+
+    slider.style.left = w / 2 - slider.offsetWidth / 2 - 20 + "px";
+    /*execute a function when the mouse button is pressed:*/
+
+    slider.addEventListener("mousedown", slideReady);
+    /*and another function when the mouse button is released:*/
+
+    window.addEventListener("mouseup", slideFinish);
+    /*or touched (for touch screens:*/
+
+    slider.addEventListener("touchstart", slideReady);
+    /*and released (for touch screens:*/
+
+    window.addEventListener("touchstop", slideFinish);
+
+    function slideReady(e) {
+      /*prevent any other actions that may occur when moving over the image:*/
+      e.preventDefault();
+      /*the slider is now clicked and ready to move:*/
+
+      clicked = 1;
+      /*execute a function when the slider is moved:*/
+
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+
+    function slideFinish() {
+      /*the slider is no longer clicked:*/
+      clicked = 0;
+    }
+
+    function slideMove(e) {
+      var lock = 100;
+      var pos;
+      /*if the slider is no longer clicked, exit this function:*/
+
+      if (clicked == 0) return false;
+      /*get the cursor's x position:*/
+
+      pos = getCursorPos(e);
+      /*prevent the slider from being positioned outside the image:*/
+
+      if (pos < 0 + lock) pos = 0 + lock;
+      if (pos > w - lock) pos = w - lock;
+      /*execute a function that will resize the overlay image according to the cursor:*/
+
+      slide(pos);
+    }
+
+    function getCursorPos(e) {
+      var a,
+          x = 0;
+      e = e || window.event;
+      /*get the x positions of the image:*/
+
+      a = img.getBoundingClientRect();
+      /*calculate the cursor's x coordinate, relative to the image:*/
+
+      x = e.pageX - a.left;
+      /*consider any page scrolling:*/
+
+      x = x - window.pageXOffset;
+      return x;
+    }
+
+    function slide(x) {
+      /*resize the image:*/
+      img.style.width = x + "px";
+      /*position the slider:*/
+
+      slider.style.left = img.offsetWidth - slider.offsetWidth / 2 - 3 + "px";
+    }
+  }
+}
+
+/***/ }),
+
 /***/ "./src/js/feedback.js":
 /*!****************************!*\
   !*** ./src/js/feedback.js ***!
@@ -2365,40 +2489,6 @@ function feedback() {
         js_source.value = query.match(source_regexp);
         js_medium.value = query.match(medium_regexp);
         js_campaign.value = query.match(campaing_regexp);
-      } //обработка файла
-
-
-      if (form.querySelector('.file-stiller__input')) {
-        var uploadFile = function uploadFile(file) {
-          if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
-            alert('Разрешены только изображения.');
-            formImage.value = '';
-            return;
-          }
-
-          if (file.size > 2 * 1024 * 1024) {
-            alert('Файл должен быть менее 2мб');
-            return;
-          }
-
-          var reader = new FileReader();
-
-          reader.onload = function (e) {
-            formPreview.innerHTML = "<img class=\"file-stiller__picture\" src=\"".concat(e.target.result, "\" alt=\"picture\">");
-          };
-
-          reader.onerror = function (e) {
-            alert('Ошибка загрузки изображения');
-          };
-
-          reader.readAsDataURL(file);
-        };
-
-        var formImage = form.querySelector('.file-stiller__input');
-        var formPreview = form.querySelector('.file-stiller__picture-wrapper');
-        formImage.addEventListener('change', function () {
-          uploadFile(formImage.files[0]);
-        });
       }
     };
 
@@ -2452,14 +2542,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_move_up_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/move-up.js */ "./src/js/move-up.js");
 /* harmony import */ var _js_popups_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/popups.js */ "./src/js/popups.js");
 /* harmony import */ var _js_parallax_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../js/parallax.js */ "./src/js/parallax.js");
-/* harmony import */ var _js_burger_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../js/burger.js */ "./src/js/burger.js");
-/* harmony import */ var _js_slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/slider.js */ "./src/js/slider.js");
-/* harmony import */ var _js_tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../js/tabs.js */ "./src/js/tabs.js");
-/* harmony import */ var _js_header_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../js/header.js */ "./src/js/header.js");
-/* harmony import */ var _js_select_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../js/select.js */ "./src/js/select.js");
-/* harmony import */ var _js_feedback_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../js/feedback.js */ "./src/js/feedback.js");
-/* harmony import */ var _js_anim_appear_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../js/anim-appear.js */ "./src/js/anim-appear.js");
-/* harmony import */ var _js_tilt_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../js/tilt.js */ "./src/js/tilt.js");
+/* harmony import */ var _js_compare_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../js/compare.js */ "./src/js/compare.js");
+/* harmony import */ var _js_burger_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/burger.js */ "./src/js/burger.js");
+/* harmony import */ var _js_slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../js/slider.js */ "./src/js/slider.js");
+/* harmony import */ var _js_tabs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../js/tabs.js */ "./src/js/tabs.js");
+/* harmony import */ var _js_header_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../js/header.js */ "./src/js/header.js");
+/* harmony import */ var _js_select_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../js/select.js */ "./src/js/select.js");
+/* harmony import */ var _js_feedback_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../js/feedback.js */ "./src/js/feedback.js");
+/* harmony import */ var _js_anim_appear_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../js/anim-appear.js */ "./src/js/anim-appear.js");
+/* harmony import */ var _js_tilt_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../js/tilt.js */ "./src/js/tilt.js");
+
 
 
 
@@ -2488,14 +2580,15 @@ function start() {
   Object(_js_move_up_js__WEBPACK_IMPORTED_MODULE_2__["moveUp"])();
   Object(_js_popups_js__WEBPACK_IMPORTED_MODULE_3__["popups"])();
   Object(_js_parallax_js__WEBPACK_IMPORTED_MODULE_4__["parallax"])();
-  Object(_js_burger_js__WEBPACK_IMPORTED_MODULE_5__["burger"])();
-  Object(_js_slider_js__WEBPACK_IMPORTED_MODULE_6__["slider"])();
-  Object(_js_tabs_js__WEBPACK_IMPORTED_MODULE_7__["tabs"])();
-  Object(_js_header_js__WEBPACK_IMPORTED_MODULE_8__["header"])();
-  Object(_js_select_js__WEBPACK_IMPORTED_MODULE_9__["select"])();
-  Object(_js_feedback_js__WEBPACK_IMPORTED_MODULE_10__["feedback"])();
-  Object(_js_anim_appear_js__WEBPACK_IMPORTED_MODULE_11__["animAppear"])();
-  Object(_js_tilt_js__WEBPACK_IMPORTED_MODULE_12__["tilt"])();
+  Object(_js_compare_js__WEBPACK_IMPORTED_MODULE_5__["compare"])();
+  Object(_js_burger_js__WEBPACK_IMPORTED_MODULE_6__["burger"])();
+  Object(_js_slider_js__WEBPACK_IMPORTED_MODULE_7__["slider"])();
+  Object(_js_tabs_js__WEBPACK_IMPORTED_MODULE_8__["tabs"])();
+  Object(_js_header_js__WEBPACK_IMPORTED_MODULE_9__["header"])();
+  Object(_js_select_js__WEBPACK_IMPORTED_MODULE_10__["select"])();
+  Object(_js_feedback_js__WEBPACK_IMPORTED_MODULE_11__["feedback"])();
+  Object(_js_anim_appear_js__WEBPACK_IMPORTED_MODULE_12__["animAppear"])();
+  Object(_js_tilt_js__WEBPACK_IMPORTED_MODULE_13__["tilt"])();
 }
 
 /***/ }),
