@@ -14,6 +14,25 @@
     width: 100%;
     color: #333333;
   }
+  &__gens {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-color: white;
+  }
+  &__gen {
+    position: absolute;
+    top: var(--top); left: var(--left);
+    width: var(--width); height: var(--height);
+
+    mix-blend-mode: difference;
+    opacity: var(--opacity);
+
+    background-image: url(../img/dnk.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(var(--rotate));
+  }
   &__bouble {
     display: flex;
     flex-direction: column;

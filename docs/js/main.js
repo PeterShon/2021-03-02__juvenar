@@ -2978,14 +2978,17 @@ function slider() {
     //бесконечные слайды
     slidesPerView: 3,
     //слайдов к показу
-    spaceBetween: 30,
-    //расстояние между слайдами
+    //spaceBetween: 73, //расстояние между слайдами
     slidesPerGroup: 1,
     //количество слайдов на свайп (соблюдать целочисленное деление perView/perGroup)
     shortSwipes: false,
     //включение/отключение функции короткого свайпа
     longSwipesMs: 70,
     //длительность длинного свайпа в МС
+    centeredSlides: true,
+    //активный слайд в центр
+    speed: 1000,
+    //скорость свайпа
     // If we need pagination
     pagination: {
       el: '.slider__pagination',
@@ -3098,7 +3101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tilt", function() { return tilt; });
 /* tilt */
 function tilt() {
-  VanillaTilt.init(document.querySelector(".card"), {
+  VanillaTilt.init(document.querySelector(".js-tilt"), {
     max: 10,
     glare: true,
     "max-glare": 0.4,

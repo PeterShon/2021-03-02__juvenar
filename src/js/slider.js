@@ -7,10 +7,13 @@ export function slider() {
     // Optional parameters
     loop: true, //бесконечные слайды
     slidesPerView: 3, //слайдов к показу
-    spaceBetween: 30, //расстояние между слайдами
+    //spaceBetween: 73, //расстояние между слайдами
     slidesPerGroup: 1, //количество слайдов на свайп (соблюдать целочисленное деление perView/perGroup)
     shortSwipes: false, //включение/отключение функции короткого свайпа
     longSwipesMs: 70, //длительность длинного свайпа в МС
+    centeredSlides: true, //активный слайд в центр
+    speed: 1000, //скорость свайпа
+
     // If we need pagination
     pagination: {
       el: '.slider__pagination',
