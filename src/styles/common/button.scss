@@ -32,4 +32,19 @@
   .form_vertical & {
     width: 100%; height: 72px;
   }
+  &_green {
+    background: radial-gradient(116.32% 119.44% at 47.35% -22.92%, #9AFF3D 0.01%, #56BF13 100%);
+    box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 14px 36px rgba(72, 255, 90, 0.25);
+    border-bottom: 5px solid #49A903;
+
+    animation-name: fly;
+    animation-delay: 0;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2.3s;
+    &:hover {
+      background: radial-gradient(116.32% 119.44% at 47.35% -22.92%, #9AFF3D 0.01%, #48a011 100%);
+      border-bottom: 5px solid #3b8a02;
+    }
+  }
 }

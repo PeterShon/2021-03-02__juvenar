@@ -1280,112 +1280,56 @@ select:-webkit-autofill:focus {
 /* footer */
 
 .footer {
+  background: rgba(0, 10, 62, 0.6);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   /* footer - logo */
-  /* footer - nav */
   /* footer - widgets */
 }
 
 .footer__inner {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0;
   padding: 60px 0 30px;
+  align-items: start;
 }
 
-.footer__logo {
-  grid-area: 1/1/3/4;
-}
-
-.footer__nav {
-  grid-area: 1/4/3/7;
-}
-
-.footer__nav-list {
+.footer__logo p {
   margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer__nav-list li a {
-  display: block;
-  padding: 5px 5px;
-  color: black;
-  transition: 0.5s;
-}
-
-.footer__nav-list li a:hover {
-  background: lightblue;
   color: white;
-  transition: 0s;
 }
 
-.footer__widgets-box_contacts {
-  grid-area: 1/7/2/13;
+.footer__logo-img {
+  width: 367px;
+  height: 76px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
 }
 
-.footer__widgets-box_address {
-  grid-area: 2/7/3/13;
+.footer__widgets-box_warning {
+  align-self: center;
 }
 
-.footer__contacts {
+.footer__widgets-box_button {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-self: end;
 }
 
-.footer__contacts-header {
-  background: lightblue;
-  align-self: stretch;
-  margin-bottom: 10px;
-  text-align: end;
+.footer__warning {
+  font-size: 24px;
   color: white;
-  font-weight: bold;
+  text-align: center;
 }
 
-.footer__phone {
-  position: relative;
-  display: block;
-  text-align: end;
-  color: black;
-}
-
-.footer__phone::before {
-  content: '- ';
-  position: absolute;
-  left: -10px;
-  visibility: hidden;
-}
-
-.footer__phone:hover::before {
-  visibility: visible;
-}
-
-.footer__email {
-  position: relative;
-  display: block;
-  text-align: end;
-  color: black;
-}
-
-.footer__email::before {
-  content: '- ';
-  position: absolute;
-  left: -10px;
-  visibility: hidden;
-}
-
-.footer__email:hover::before {
-  visibility: visible;
-}
-
-.footer__address-header {
-  background: lightblue;
-  margin-bottom: 10px;
-  text-align: end;
+.footer__createdby {
+  margin-top: 11px;
   color: white;
-  font-weight: bold;
-}
-
-.footer__address-filler {
-  display: block;
-  text-align: end;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .promo-section {
@@ -2976,6 +2920,27 @@ select:-webkit-autofill:focus {
 .form_vertical .button {
   width: 100%;
   height: 72px;
+}
+
+.button_green {
+  background: radial-gradient(116.32% 119.44% at 47.35% -22.92%, #9AFF3D 0.01%, #56BF13 100%);
+  box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 14px 36px rgba(72, 255, 90, 0.25);
+  border-bottom: 5px solid #49A903;
+  -webkit-animation-name: fly;
+  animation-name: fly;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 2.3s;
+  animation-duration: 2.3s;
+}
+
+.button_green:hover {
+  background: radial-gradient(116.32% 119.44% at 47.35% -22.92%, #9AFF3D 0.01%, #48a011 100%);
+  border-bottom: 5px solid #3b8a02;
 }
 
 .checkbox {
