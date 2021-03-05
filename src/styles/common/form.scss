@@ -4,13 +4,23 @@
   background: linear-gradient(to bottom, #fff, #f2f2f2);
   border-radius: 310px;
   padding: 32px 106px 32px 124px;
+  &_belt {
+    background: transparent;
+    padding: 0;
+  }
   &__utm, &__locker {
     display: none;
   }
   &__header {
     width: 100%;
+    .form_belt &{
+      color: #484848;
+    }
     & h2 {
       margin: 0;
+      .form_belt &{
+        font-size: 35px;
+      }
     }
     & p {
       display: inline-block;
@@ -23,9 +33,16 @@
 
         background-color: #3300FF;
         color: white;
+        .form_belt &{
+          background-color: transparent;
+          color: #00A3FF;
+        }
       }
       &:last-child {
         color: #3300FF;
+        .form_belt &{
+          color: #00A3FF;
+        }
       }
     }
   }
@@ -36,12 +53,18 @@
     grid-template-rows: repeat(2, auto);
     grid-gap: 31px 22px;
     align-items: end;
+    .form_belt &{
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: auto;
+    }
   }
   &__input {
     grid-column: span 1;
   }
   &__button {
-    width: 100%;
     grid-column: span 2;
+    .form_belt &{
+      grid-column: span 1;
+    }
   }
 }

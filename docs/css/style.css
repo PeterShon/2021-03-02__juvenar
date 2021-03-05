@@ -1034,6 +1034,34 @@ template {
   box-sizing: inherit;
 }
 
+@-webkit-keyframes fly {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 html {
   min-height: 100%;
   box-sizing: border-box;
@@ -1358,6 +1386,7 @@ select:-webkit-autofill:focus {
 
 .promo-section {
   background: url(../img/bg-sea.webp) no-repeat center -70px/cover;
+  overflow: hidden;
 }
 
 .promo-section__inner {
@@ -1493,6 +1522,24 @@ select:-webkit-autofill:focus {
   margin-bottom: 26px;
 }
 
+.promo-section__product {
+  position: absolute;
+  right: -19%;
+  top: 11%;
+  width: 1038px;
+  height: 939px;
+  pointer-events: none;
+}
+
+.promo-section__product img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
 .action-section {
   position: relative;
   margin-top: -70px;
@@ -1603,34 +1650,6 @@ select:-webkit-autofill:focus {
   animation-iteration-count: infinite;
   -webkit-animation-duration: 2.3s;
   animation-duration: 2.3s;
-}
-
-@-webkit-keyframes fly {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fly {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
 }
 
 .action-section__icon {
@@ -2013,6 +2032,55 @@ select:-webkit-autofill:focus {
   color: #6A6A6A;
   text-align: left;
   transform: skewX(25deg) translateX(18px);
+}
+
+.belt-section {
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(116.32% 119.44% at 47.35% -22.92%, #FFFFFF 0.01%, #F4F4F4 100%), #F6F5FF;
+}
+
+.belt-section__inner {
+  height: 318px;
+  padding: 44px 0 72px;
+  grid-template-columns: 3fr 4fr;
+  grid-row-gap: 0px;
+  grid-gap: 0;
+  align-content: center;
+}
+
+.belt-section__product {
+  position: relative;
+  display: flex;
+  align-items: center;
+  grid-column: 1/2;
+  width: 100%;
+  pointer-events: none;
+  -webkit-animation-name: fly;
+  animation-name: fly;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+.belt-section__product img {
+  position: absolute;
+  width: 100%;
+  height: 488px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  transform: translateY(12px);
+}
+
+.belt-section__feedback {
+  grid-column: 2/3;
 }
 
 .main-elements {
@@ -2846,6 +2914,12 @@ select:-webkit-autofill:focus {
   border-bottom: 5px solid #0831ff;
 }
 
+.form_belt .button {
+  width: 358px;
+  height: 72px;
+  margin-left: 17px;
+}
+
 .checkbox {
   position: relative;
   padding-left: 25px;
@@ -3039,6 +3113,11 @@ input:focus + .checkbox__fake {
 .input__body[name="name"],
 .input__body[name="telephone"] {
   width: 360px;
+}
+
+.form_belt .input__body[name="name"],
+.form_belt .input__body[name="telephone"] {
+  width: 297px;
 }
 
 .input__placeholder {
@@ -3475,6 +3554,11 @@ input:-webkit-autofill + .input__placeholder::before {
   padding: 32px 106px 32px 124px;
 }
 
+.form_belt {
+  background: transparent;
+  padding: 0;
+}
+
 .form__utm,
 .form__locker {
   display: none;
@@ -3484,8 +3568,16 @@ input:-webkit-autofill + .input__placeholder::before {
   width: 100%;
 }
 
+.form_belt .form__header {
+  color: #484848;
+}
+
 .form__header h2 {
   margin: 0;
+}
+
+.form_belt .form__header h2 {
+  font-size: 35px;
 }
 
 .form__header p {
@@ -3501,8 +3593,17 @@ input:-webkit-autofill + .input__placeholder::before {
   color: white;
 }
 
+.form_belt .form__header p:first-child {
+  background: transparent;
+  color: #00A3FF;
+}
+
 .form__header p:last-child {
   color: #3300FF;
+}
+
+.form_belt .form__header p:last-child {
+  color: #00A3FF;
 }
 
 .form__body {
@@ -3514,13 +3615,21 @@ input:-webkit-autofill + .input__placeholder::before {
   align-items: end;
 }
 
+.form_belt .form__body {
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto;
+}
+
 .form__input {
   grid-column: span 1;
 }
 
 .form__button {
-  width: 100%;
   grid-column: span 2;
+}
+
+.form_belt .form__button {
+  grid-column: span 1;
 }
 
 .file-stiller {

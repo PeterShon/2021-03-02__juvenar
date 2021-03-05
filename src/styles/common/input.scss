@@ -33,6 +33,9 @@
     }
     &[name = "name"], &[name = "telephone"] {
       width: 360px;
+      .form_belt & {
+        width: 297px;
+      }
     }
   }
   &__placeholder {

@@ -3,6 +3,7 @@
   background-position: center -70px;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
   &__container {
 
   }
@@ -137,6 +138,18 @@
           margin-bottom: 26px;
         }
       }
+    }
+  }
+  &__product {
+    position: absolute;
+    right: -19%; top: 11%;
+
+    width: 1038px; height: 939px;
+    pointer-events: none;
+    & img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
   }
 }

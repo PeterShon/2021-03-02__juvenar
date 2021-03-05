@@ -95,17 +95,6 @@
     animation-iteration-count: infinite;
     animation-duration: 2.3s;
   }
-  @keyframes fly {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
   &__icon {
     flex: 1 0 auto;
     display: flex;

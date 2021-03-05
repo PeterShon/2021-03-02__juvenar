@@ -3,7 +3,18 @@
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
+  @keyframes fly {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 }
 
 html {
