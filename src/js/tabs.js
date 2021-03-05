@@ -30,11 +30,11 @@ export function tabs() {
               field.querySelector('.tabs__item-body_active').style.maxHeight = 0
               field.querySelector('.tabs__item-body_active').classList.remove('tabs__item-body_active')
               button.classList.add('tabs__tab_active')
-              body.style.maxHeight = body.scrollHeight + 'px'
+              body.style.maxHeight = body.scrollHeight + parseInt(getComputedStyle(body).getPropertyValue('--paddingTop')) + parseInt(getComputedStyle(body).getPropertyValue('--paddingBottom')) + 'px'
               body.classList.add('tabs__item-body_active')
             } else {
               button.classList.add('tabs__tab_active')
-              body.style.maxHeight = body.scrollHeight + 'px'
+              body.style.maxHeight = body.scrollHeight + parseInt(getComputedStyle(body).getPropertyValue('--paddingTop')) + parseInt(getComputedStyle(body).getPropertyValue('--paddingBottom')) + 'px'
               body.classList.add('tabs__item-body_active')
             }
           }

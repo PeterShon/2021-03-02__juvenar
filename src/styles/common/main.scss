@@ -1,2 +1,8 @@
 .main {
+  &__sea-wrapper {
+    background-image: url(../img/bg-sea2.jpg);
+    background-position: center 78px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

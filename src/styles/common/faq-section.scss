@@ -1,0 +1,35 @@
+.faq-section {
+  position: relative;
+  &__container {
+
+  }
+  &__inner {
+    padding: 94px 0 94px;
+    grid-row-gap: 0;
+  }
+  &__title {
+    grid-column: 1/-1;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #000;
+    & h2 {
+      display: flex;
+      align-items: center;
+      & p {
+        width: 72px; height: 2px;
+        margin: 0 14px;
+        display: inline-block;
+
+        background-color: #00A3FF;
+      }
+    }
+  }
+  &__tabs {
+    margin-top: 93px;
+    padding: 0 125px;
+    grid-column: 1/-1;
+    width: 100%;
+  }
+}

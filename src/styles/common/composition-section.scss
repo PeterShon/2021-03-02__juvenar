@@ -16,6 +16,9 @@
     grid-column: 1/-1;
     width: 100%;
     color: #000;
+    & > * {
+      text-align: center;
+    }
   }
   &__subtitle {
     grid-column: 1/-1;
@@ -83,6 +86,12 @@
     grid-row: 1/-1;
 
     max-height: 764px;
+
+    animation-name: fly;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
     & img {
       position: relative;
       z-index: 1;
