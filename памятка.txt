@@ -11,3 +11,9 @@
   https://joshuajohnson.co.uk/Choices/
   https://codepen.io/dev_piki/pen/gyBwOm
   https://github.com/jshjohnson/Choices
+
+yandex: juvane.kz@yandex.ru
+password: KkjgsdfaDAS21F
+для elfsight.com так же
+карты вставленны с помощью сервиса https://snazzymaps.com/
+api ключ аккаунта гугл использовал свой, но т.к. это платно, то после сдачи проекта я его дактивирую

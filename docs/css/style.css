@@ -2162,7 +2162,7 @@ select:-webkit-autofill:focus {
 }
 
 .address-section__inner {
-  padding: 41px 0 94px;
+  padding: 41px 0 41px;
   grid-row-gap: 0;
 }
 
@@ -2255,6 +2255,35 @@ select:-webkit-autofill:focus {
 
 .address-section__text_address::before {
   background: url(../img/home-wh.svg) no-repeat center/contain;
+}
+
+.insta-section {
+  position: relative;
+}
+
+.insta-section__inner {
+  padding: 42px 0 132px;
+  grid-row-gap: 0;
+}
+
+.insta-section__title {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+}
+
+.insta-section__title h2 {
+  display: flex;
+  align-items: center;
+}
+
+.insta-section__insta {
+  grid-column: 1/-1;
+  margin-top: 81px;
+  padding: 0 10px;
+  overflow: hidden;
 }
 
 .main-elements {
@@ -2883,10 +2912,10 @@ select:-webkit-autofill:focus {
   content: 'в начало';
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   text-align: center;
-  color: #000000;
+  color: #00A3FF;
   font-size: 12;
   font-weight: 600;
   opacity: 0;
