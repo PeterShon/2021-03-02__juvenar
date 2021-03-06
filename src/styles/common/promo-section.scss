@@ -292,6 +292,7 @@
         &::before {
           content: '-';
           width: 18px; height: 18px;
+          flex: 0 0 auto;
           display: inline-flex;
           justify-content: center;
           align-items: center;
@@ -354,7 +355,7 @@
       width: 664px;
       height: 600px;
     }
-    @include media-tablet-horizontal {
+    @include media-tablet {
       z-index: 0;
       left: auto; top: auto; right: auto;
       position: relative;
