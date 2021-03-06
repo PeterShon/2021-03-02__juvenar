@@ -3156,8 +3156,13 @@ function compare() {
       a = img.getBoundingClientRect();
       /*calculate the cursor's x coordinate, relative to the image:*/
 
-      x = e.pageX - a.left;
+      if (e.type == 'mousemove') {
+        x = e.pageX - a.left;
+      } else {
+        x = e.targetTouches[0].clientX - a.left;
+      }
       /*consider any page scrolling:*/
+
 
       x = x - window.pageXOffset;
       return x;
@@ -3981,7 +3986,8 @@ function tilt() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "video", function() { return video; });
 function video() {
-  var video = document.querySelector('.promo-section__background-video'); //video.play();
+  var video = document.querySelector('.promo-section__background-video');
+  video.play();
 }
 
 /***/ }),

@@ -63,7 +63,11 @@ export function compare() {
       /*get the x positions of the image:*/
       a = img.getBoundingClientRect();
       /*calculate the cursor's x coordinate, relative to the image:*/
-      x = e.pageX - a.left;
+      if (e.type == 'mousemove') {
+        x = e.pageX - a.left;
+      } else {
+        x = e.targetTouches[0].clientX - a.left;
+      }
       /*consider any page scrolling:*/
       x = x - window.pageXOffset;
       return x;

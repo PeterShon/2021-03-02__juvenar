@@ -15,6 +15,9 @@
     @include media-tablet-horizontal {
       width: 350px; height: 350px;
     }
+    @include media-mobile {
+      width: 300px; height: 300px;
+    }
   }
   &__img {
     position: relative;
