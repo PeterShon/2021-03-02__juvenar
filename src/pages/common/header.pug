@@ -29,7 +29,17 @@ header.header.js_lock-padding
               .burger__inner.inner
                 nav.burger__nav
                   ul.burger__nav-list
-                    - var links = [['#', 'Основные элементы'], ['#', 'Слайдер'], ['#', 'Табы'], ['#', 'Галерея'], ['#', 'Форма'], ['#', 'Чекпоинты']]
+                    - var links = [['#composition', 'Состав'], ['#reviews', 'Отзывы'], ['#faq', 'Вопросы—ответы'], ['#address', 'Контакты']]
                     each val, index in links
                       li
                         a(href = val[0])= val[1]
+                a.burger__logo(href="/?utm_source=istochnik&utm_medium=organic&utm_campaign=test_of_utm") 
+                  img.burger__logo-img(src="./img/logo.png", alt="logo")
+                .burger__widgets
+                  a.burger__whatsapp(href="https://wa.me/380951580858")  + 380 95 158 0858
+                  a.burger__btn.button.button_long(href="#") Заказать комплекс
+                  .burger__lang
+                    select#header__lang-select.burger__lang-select.selecter(name="select")
+                      option(value="RU")
+                      option(value="KZ")
+                      option(value="EN")

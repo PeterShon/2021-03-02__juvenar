@@ -3087,7 +3087,7 @@ function compare() {
     h = img.offsetHeight;
     /*set the width of the img element to 50%:*/
 
-    img.style.width = w / 2 + 3 - 20 + "px";
+    img.style.width = w / 2 + 3 + "px";
     /*create slider:*/
 
     slider = document.createElement("DIV");
@@ -3097,9 +3097,8 @@ function compare() {
 
     img.parentElement.insertBefore(slider, img);
     /*position the slider in the middle:*/
-    /////////////slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
 
-    slider.style.left = w / 2 - slider.offsetWidth / 2 - 20 + "px";
+    slider.style.left = w / 2 - slider.offsetWidth / 2 + "px";
     /*execute a function when the mouse button is pressed:*/
 
     slider.addEventListener("mousedown", slideReady);
@@ -3982,8 +3981,7 @@ function tilt() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "video", function() { return video; });
 function video() {
-  var video = document.querySelector('.promo-section__background-video');
-  video.play();
+  var video = document.querySelector('.promo-section__background-video'); //video.play();
 }
 
 /***/ }),

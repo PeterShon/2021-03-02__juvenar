@@ -39,6 +39,9 @@
       .form_vertical & {
         width: 100%;
       }
+      @include media-custom(1550px) {
+        width: 100%;
+      }
     }
   }
   &__placeholder {

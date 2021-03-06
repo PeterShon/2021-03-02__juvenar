@@ -47,4 +47,26 @@
       border-bottom: 5px solid #3b8a02;
     }
   }
+  @include media-laptop {
+    width: 250px; height: 60px;
+    padding: 10px 15px;
+  }
+  @include media-mobile {
+    width: 200px; height: 40px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  &_long {
+    width: 100%;
+    border-radius: 10px;
+    height: 49px;
+    @include media-tablet {
+      height: 41px;
+      font-size: 16px;
+      padding: 7px 10px;
+    }
+  }
+  &_form-long {
+    width: 100%;
+  }
 }

@@ -19,6 +19,13 @@
     background: radial-gradient(126.44% 131.19% at 23.28% -24.02%, #FFFFFF 0.01%, #F9FBFF 100%);
     box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25);
   }
+  @include media-laptop {
+    padding: 32px 106px 32px 100px;
+  }
+  @include media-tablet-horizontal {
+    border-radius: 50px;
+    padding: 20px;
+  }
   &__utm, &__locker {
     display: none;
   }
@@ -44,6 +51,11 @@
 
         background-color: #3300FF;
         color: white;
+        @include media-tablet-horizontal {
+          border-top-left-radius: 20px;
+          left: auto;
+          padding: 4px 7px 4px 15px;
+        }
         .form_belt &{
           background-color: transparent;
           color: #00A3FF;
@@ -54,6 +66,14 @@
         .form_belt &{
           color: #00A3FF;
         }
+      }
+    }
+    @include media-custom(1550px) {
+      & h2 {
+        font-size: 24px;
+      }
+      & br {
+        display: none;
       }
     }
   }
@@ -81,6 +101,14 @@
       grid-template-columns: auto;
       grid-template-rows: auto auto auto;
     }
+    @include media-tablet-horizontal {
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(3, auto);
+      grid-gap: 10px;
+    }
+    @include media-tablet {
+      margin-top: 10px;
+    }
   }
   &__input {
     grid-column: span 1;
@@ -91,6 +119,10 @@
       grid-column: auto;
       grid-row: span 1;
     }
+    @include media-tablet-horizontal {
+      grid-column: auto;
+      grid-row: span 1;
+    }
   }
   &__button {
     grid-column: span 2;
@@ -98,6 +130,10 @@
       grid-column: span 1;
     }
     .form_vertical &{
+      grid-column: auto;
+      grid-row: span 1;
+    }
+    @include media-tablet-horizontal {
       grid-column: auto;
       grid-row: span 1;
     }
