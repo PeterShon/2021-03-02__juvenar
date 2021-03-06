@@ -1,7 +1,8 @@
 header.header.js_lock-padding
   .header__container.container
     .header__inner.inner
-      a.header__logo(href="#/?utm_source=istochnik&utm_medium=organic&utm_campaign=test_of_utm")
+      //#top
+      a.header__logo(href="/?utm_source=istochnik&utm_medium=organic&utm_campaign=test_of_utm") 
         img.header__logo-img(src="./img/logo.png", alt="logo")
       .header__lang
         select#header__lang-select.header__lang-select.selecter(name="select")
@@ -10,7 +11,7 @@ header.header.js_lock-padding
           option(value="EN")
       nav.header__nav
         ul.header__nav-list
-          - var links = [['#', 'Состав'], ['#', 'Отзывы'], ['#', 'Доставка и оплата'], ['#', 'Вопросы—ответы'], ['#', 'Контакты']]
+          - var links = [['#composition', 'Состав'], ['#reviews', 'Отзывы'], ['#faq', 'Вопросы—ответы'], ['#address', 'Контакты']]
           each val, index in links
             li
               a(href = val[0])= val[1]

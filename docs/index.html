@@ -11,7 +11,8 @@
   <body>
     <header class="header js_lock-padding">
       <div class="header__container container">
-        <div class="header__inner inner"><a class="header__logo" href="#/?utm_source=istochnik&amp;utm_medium=organic&amp;utm_campaign=test_of_utm"><img class="header__logo-img" src="./img/logo.png" alt="logo"></a>
+        <div class="header__inner inner">
+          <!--#top--><a class="header__logo" href="/?utm_source=istochnik&amp;utm_medium=organic&amp;utm_campaign=test_of_utm"> <img class="header__logo-img" src="./img/logo.png" alt="logo"></a>
           <div class="header__lang">
             <select class="header__lang-select selecter" id="header__lang-select" name="select">
               <option value="RU"></option>
@@ -21,11 +22,10 @@
           </div>
           <nav class="header__nav">
             <ul class="header__nav-list">
-              <li><a href="#">Состав</a></li>
-              <li><a href="#">Отзывы</a></li>
-              <li><a href="#">Доставка и оплата</a></li>
-              <li><a href="#">Вопросы—ответы</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#composition">Состав</a></li>
+              <li><a href="#reviews">Отзывы</a></li>
+              <li><a href="#faq">Вопросы—ответы</a></li>
+              <li><a href="#address">Контакты</a></li>
             </ul>
           </nav>
           <div class="header__widgets"><a class="header__whatsapp" href="https://wa.me/380951580858"> + 380 95 158 0858</a><a class="header__button button" href="#">Заказать комплекс</a>
@@ -59,7 +59,12 @@
       </div>
     </header>
     <main class="main">
-      <section class="promo-section">
+      <section class="promo-section" id="top">
+        <div class="promo-section__background">
+          <video class="promo-section__background-video" muted loop>
+            <source src="./video/background.mp4">
+          </video>
+        </div>
         <div class="promo-section__container container">
           <div class="promo-section__inner inner">
             <div class="promo-section__main-title">
@@ -68,7 +73,7 @@
                 <p>Нутрикосметика на основе пептидов морского коллагена <br> для сохранения <p>здоровья и молодости вашей кожи, волос и ногтей</p></p>
               </div>
             </div>
-            <div class="promo-section__feedback form form_horizontal js_form-to-email">
+            <form class="promo-section__feedback form form_horizontal js_form-to-email">
               <div class="form__header title title_less">
                 <h2 class="_an-i _nra _an-up"><p>Скидка 10 %</p> при использовании <br>промокода <p>Juvena1</p> на перый заказ</h2>
               </div>
@@ -87,7 +92,7 @@
                 </div>
                 <button class="form__button button">Заказать комплекс</button>
               </div>
-            </div>
+            </form>
             <div class="promo-section__compare compare">
               <div class="compare__container">
                 <div class="compare__img"> <img src="./img/before.jpg" alt="before"></div>
@@ -154,7 +159,7 @@
           </div>
         </div>
       </section>
-      <section class="composition-section">
+      <section class="composition-section" id="composition">
         <div class="drops"></div>
         <div class="composition-section__container container">
           <div class="composition-section__inner inner">
@@ -198,7 +203,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews-section">
+      <section class="reviews-section" id="reviews">
         <div class="drops"></div>
         <div class="reviews-section__gens">
           <div class="reviews-section__gen" style="--opacity: 0.15; --width: 239px; --height: 122px; --rotate: -99deg; --top: 60%; --left: 6%"></div>
@@ -314,7 +319,7 @@
         <div class="belt-section__container container">
           <div class="belt-section__inner inner">
             <div class="belt-section__product"><img src="./img/product-belt.png" alt="product"></div>
-            <div class="belt-section__feedback form form_belt js_form-to-email">
+            <form class="belt-section__feedback form form_belt js_form-to-email">
               <div class="form__header title title_less">
                 <h2 class="_an-i _nra _an-up"><p>Скидка 10 %</p> при использовании <br>промокода <p>Juvena1</p> на перый заказ</h2>
               </div>
@@ -333,12 +338,12 @@
                 </div>
                 <button class="form__button button">Заказать комплекс</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
       <div class="main__sea-wrapper">
-        <section class="faq-section">
+        <section class="faq-section" id="faq">
           <div class="faq-section__container container">
             <div class="faq-section__inner inner">
               <div class="faq-section__title title">
@@ -379,7 +384,7 @@
             </div>
           </div>
         </section>
-        <section class="address-section">
+        <section class="address-section" id="address">
           <div class="address-section__container container">
             <div class="address-section__inner inner">
               <div class="address-section__title title">
@@ -395,7 +400,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="address-section__form form form_vertical js_form-to-email">
+                <form class="address-section__form form form_vertical js_form-to-email">
                   <div class="form__header title title_m">
                     <h2 class="_an-i _nra _an-up">Остались вопросы?</h2>
                   </div>
@@ -415,7 +420,7 @@
                     </div>
                     <button class="form__button button">Заказать комплекс</button>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -434,7 +439,7 @@
         </section>
         <footer class="footer">
           <div class="footer__conteiner container">
-            <div class="footer__inner inner"><a class="footer__logo" href="#"><img class="footer__logo-img" src="./img/logo-long.png" alt="logo">
+            <div class="footer__inner inner"><a class="footer__logo" href="#top"><img class="footer__logo-img" src="./img/logo-long.png" alt="logo">
                 <p>Все права защищены 2021</p></a>
               <div class="footer__widgets-box footer__widgets-box_warning">
                 <div class="footer__warning">Биологически активная добавка<br>Не является лекарственным средством!</div>

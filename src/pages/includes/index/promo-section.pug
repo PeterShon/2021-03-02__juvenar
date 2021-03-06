@@ -1,11 +1,14 @@
-section.promo-section
+section#top.promo-section
+  .promo-section__background
+    video.promo-section__background-video(muted loop)
+      source(src='./video/background.mp4')
   .promo-section__container.container
     .promo-section__inner.inner
         .promo-section__main-title
           h1.promo-section__title Marine Juvena Collagen Peptides
           .promo-section__description
             p Нутрикосметика на основе пептидов морского коллагена <br> для сохранения <p>здоровья и молодости вашей кожи, волос и ногтей</p>
-        .promo-section__feedback.form.form_horizontal.js_form-to-email
+        form.promo-section__feedback.form.form_horizontal.js_form-to-email
           .form__header.title.title_less
             h2._an-i._nra._an-up <p>Скидка 10 %</p> при использовании <br>промокода <p>Juvena1</p> на перый заказ
           .form__body

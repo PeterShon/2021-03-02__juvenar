@@ -22,10 +22,10 @@
     &:-webkit-autofill:focus.js_error,
     &:-webkit-autofill.js_error,
     &:-webkit-autofill:hover.js_error {
-      background-color: pink;
-      -webkit-box-shadow: 0 0 0px 50px pink inset;
+      background-color: rgb(255, 225, 230);
+      -webkit-box-shadow: 0 0 0px 50px rgb(255, 225, 230) inset;
       & + .input__placeholder {
-        color: white;
+        color: rgb(53, 0, 0);
       }
     }
     &:-webkit-autofill, &:-webkit-autofill:hover {

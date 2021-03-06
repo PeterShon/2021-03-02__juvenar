@@ -6,13 +6,14 @@ export function feedback() {
     for (let i = 0; i < forms.length; i++) {
       const form = forms[i];
       form.addEventListener('submit', formSend); //при отправке формы запускается ф-я formSend
+
       //функция отправки
       async function formSend(e) {
         e.preventDefault(); //запрет стандартной отправки форм
         form.closest('div').classList.add('.js_wait') //родитель получает класс ожидания
         let error = formValidate(form); //присваивается результат работы функции
         let locker = form.querySelector('.js_locker')
-        const formPreview = form.querySelector('.file-stiller__picture-wrapper')
+        //const formPreview = form.querySelector('.file-stiller__picture-wrapper')
         setUTM();
         let formData = new FormData(form); //новый массив с данными всех полей
         if (error === 0 && locker.value === '') {
@@ -26,7 +27,7 @@ export function feedback() {
               let result = await response.json();
               console.log(result.message);
               form.reset();
-              formPreview.innerHTML = '';
+              //formPreview.innerHTML = '';
             } else {
               alert('Ошибка');
             }
