@@ -8,9 +8,24 @@
     grid-gap: 0;
     padding: 60px 0 30px;
     align-items: start;
+    @include media-custom(1550px) {
+      padding: 40px 20px;
+    }
+    @include media-tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-row-gap: 20px;
+    }
+    @include media-mobile {
+      grid-row-gap: 30px;
+    }
   }
   /* footer - logo */
   &__logo {
+    @include media-tablet {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
     & p {
       margin: 0;
       color: white;
@@ -26,18 +41,29 @@
   &__widgets-box {
     &_warning {
       align-self: center;
+      @include media-tablet {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
     }
     &_button {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-self: end;
+      @include media-tablet {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
     }
   }
   &__warning {
     font-size: 24px;
     color: white;
     text-align: center;
+    @include media-tablet-horizontal {
+      font-size: 18px;
+    }
   }
   &__createdby {
     margin-top: 11px;
@@ -45,5 +71,8 @@
     color: white;
     text-decoration: underline;
     text-underline-position: under;
+    @include media-tablet {
+      text-align: right;
+    }
   }
 }

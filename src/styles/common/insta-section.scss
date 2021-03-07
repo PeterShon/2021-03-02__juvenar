@@ -6,6 +6,9 @@
   &__inner {
     padding: 42px 0 132px;
     grid-row-gap: 0;
+    @include media-tablet-horizontal {
+      padding: 40px 0 60px;
+    }
   }
   &__title {
     grid-column: 1/-1;
@@ -24,5 +27,8 @@
     margin-top: 81px;
     padding: 0 10px;
     overflow: hidden;
+    @include media-tablet-horizontal {
+      margin-top: 20px;
+    }
   }
 }

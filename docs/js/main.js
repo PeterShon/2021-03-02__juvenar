@@ -3030,12 +3030,33 @@ function animAppear() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "burger", function() { return burger; });
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 /* burger */
 function burger() {
   var burger = document.querySelector('.burger');
   var burgerBtn = burger.querySelector('.burger__button');
   var body = document.querySelector('body');
+  var closers = document.querySelectorAll('.js_closer');
   burgerBtn.addEventListener('click', setStatus);
+
+  var _iterator = _createForOfIteratorHelper(closers),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var el = _step.value;
+      el.onclick = setStatus;
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
 
   function setStatus() {
     if (burger.classList.contains('burger_active')) {
@@ -3415,6 +3436,31 @@ function header() {
 
 /***/ }),
 
+/***/ "./src/js/insta.js":
+/*!*************************!*\
+  !*** ./src/js/insta.js ***!
+  \*************************/
+/*! exports provided: insta */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insta", function() { return insta; });
+/* insta */
+function insta() {
+  setTimeout(function () {
+    if (document.querySelector('#eapps-instagram-feed-1')) {
+      document.querySelector('#eapps-instagram-feed-1').lastChild.style.display = 'none';
+    }
+
+    if (document.querySelector('.eapps-link')) {
+      document.querySelector('.eapps-link').style.display = 'none';
+    }
+  }, 400);
+}
+
+/***/ }),
+
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -3437,6 +3483,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_anim_appear_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../js/anim-appear.js */ "./src/js/anim-appear.js");
 /* harmony import */ var _js_tilt_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../js/tilt.js */ "./src/js/tilt.js");
 /* harmony import */ var _js_video_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../js/video.js */ "./src/js/video.js");
+/* harmony import */ var _js_map_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../js/map.js */ "./src/js/map.js");
+/* harmony import */ var _insta_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./insta.js */ "./src/js/insta.js");
+
+
 
 
 
@@ -3471,6 +3521,27 @@ function start() {
   Object(_js_anim_appear_js__WEBPACK_IMPORTED_MODULE_10__["animAppear"])();
   Object(_js_tilt_js__WEBPACK_IMPORTED_MODULE_11__["tilt"])();
   Object(_js_video_js__WEBPACK_IMPORTED_MODULE_12__["video"])();
+  Object(_js_map_js__WEBPACK_IMPORTED_MODULE_13__["map"])();
+  Object(_insta_js__WEBPACK_IMPORTED_MODULE_14__["insta"])();
+}
+
+/***/ }),
+
+/***/ "./src/js/map.js":
+/*!***********************!*\
+  !*** ./src/js/map.js ***!
+  \***********************/
+/*! exports provided: map */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "map", function() { return map; });
+/* map - address-section */
+function map() {
+  document.querySelector('.address-section__close-info').onclick = function () {
+    document.querySelector('.address-section__map-info').style.display = 'none';
+  };
 }
 
 /***/ }),
@@ -3842,7 +3913,6 @@ function slider() {
     //бесконечные слайды
     slidesPerView: 3,
     //слайдов к показу
-    //spaceBetween: 73, //расстояние между слайдами
     slidesPerGroup: 1,
     //количество слайдов на свайп (соблюдать целочисленное деление perView/perGroup)
     shortSwipes: false,
@@ -3882,7 +3952,35 @@ function slider() {
     slideDuplicateNextClass: 'slider__item_duplicate-next',
     slidePrevClass: 'slider__item_prev',
     slideDuplicatePrevClass: 'slider__item_duplicate-prev',
-    slideBlankClass: 'slider__item_invisible-blank'
+    slideBlankClass: 'slider__item_invisible-blank',
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        //слайдов к показу
+        centeredSlides: true //активный слайд в центр
+
+      },
+      1024: {
+        slidesPerView: 2,
+        //слайдов к показу
+        centeredSlides: true //активный слайд в центр
+
+      },
+      1366: {
+        slidesPerView: 3,
+        //слайдов к показу
+        spaceBetween: 50 //расстояние между слайдами
+
+      },
+      1550: {
+        spaceBetween: 100 //расстояние между слайдами
+
+      },
+      1650: {
+        spaceBetween: 400 //расстояние между слайдами
+
+      }
+    }
   });
 }
 

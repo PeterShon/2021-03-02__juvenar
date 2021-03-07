@@ -12,6 +12,22 @@
     padding: 51px 39px 39px 39px;
   }
 }
+@include media-tablet {
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+      padding: 30px 15px 20px;
+    }
+  }
+}
 
 .tabs {
   position: relative;
@@ -41,18 +57,27 @@
     font-weight: 700;
 
     transition: 0.2s;
+    @include media-tablet {
+      padding: 15px 60px 15px 15px;
+      font-size: 18px;
+    }
+    @include media-mobile {
+      font-size: 16px;
+    }
     &:hover {
       background: #e3f4ff;
     }
     &:not(:first-child) {
       margin-left: 10px;
-      .tabs_vertical & {
-        margin-left: 0;
-        margin-top: 10px;
-      }
       .tabs_spoiler & {
         margin: 0;
         margin-top: 40px;
+        @include media-tablet-horizontal {
+          margin-top: 20px;
+        }
+        @include media-mobile {
+          margin-top: 10px;
+        }
       }
     }
     &_active {
@@ -78,6 +103,10 @@
     background-color: #49A903;
 
     transition: 0.3s;
+    @include media-tablet {
+      width: 40px; height: 40px;
+      right: 15px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -89,6 +118,9 @@
       background: linear-gradient(to bottom, #9AFF3D, #56BF13);
 
       font-size: 0;
+      @include media-tablet {
+        height: 40px;
+      }
     }
     &::after {
       content: '';
@@ -112,6 +144,9 @@
       box-shadow: 0px 14px 36px rgba(72, 255, 90, 0.25);
       &::before {
         height: 52px;
+        @include media-tablet {
+          height: 37px;
+        }
       }
       &::after{
         transform: rotate(270deg);
@@ -129,6 +164,11 @@
     padding: 0 39px 0 39px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    @include media-tablet {
+      padding: 0 15px 0 15px;
+      --paddingTop: 30;
+      --paddingBottom: 20;
+    }
     &_active {
       animation-name: appear;
       animation-duration: .1s;
@@ -153,6 +193,9 @@
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    @include media-tablet {
+      font-size: 16px;
+    }
     & p {
       display: inline;
       font-weight: 700;

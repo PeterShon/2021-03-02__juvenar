@@ -3,8 +3,13 @@ export function burger() {
   let burger = document.querySelector('.burger')
   let burgerBtn = burger.querySelector('.burger__button')
   let body = document.querySelector('body')
+  let closers = document.querySelectorAll('.js_closer')
 
   burgerBtn.addEventListener('click', setStatus)
+
+  for (let el of closers) {
+    el.onclick = setStatus;
+  }
 
   function setStatus() {
     if (burger.classList.contains('burger_active')) {

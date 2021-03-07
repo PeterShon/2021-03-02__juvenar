@@ -1,9 +1,10 @@
 .main {
   &__sea-wrapper {
-    background-image: url(../img/bg-sea2.jpg);
+    background-image: url(../img/bg-sea2.jpg), linear-gradient(to bottom, red, yellow);
     background-position: center 78px;
 
     background-repeat: no-repeat;
     background-size: 100%;
+
   }
 }

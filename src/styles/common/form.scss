@@ -8,6 +8,13 @@
     background: transparent;
     padding: 0;
   }
+  @include media-laptop {
+    padding: 32px 106px 32px 100px;
+  }
+  @include media-tablet-horizontal {
+    border-radius: 50px;
+    padding: 20px;
+  }
   &_vertical {
     box-sizing: border-box;
     position: relative;
@@ -18,13 +25,12 @@
     border-radius: 6px;
     background: radial-gradient(126.44% 131.19% at 23.28% -24.02%, #FFFFFF 0.01%, #F9FBFF 100%);
     box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25);
-  }
-  @include media-laptop {
-    padding: 32px 106px 32px 100px;
-  }
-  @include media-tablet-horizontal {
-    border-radius: 50px;
-    padding: 20px;
+    @include media-custom(1550px) {
+      padding: 15px;
+    }
+    @include media-tablet {
+      border-radius: 0px;
+    }
   }
   &__utm, &__locker {
     display: none;
@@ -33,11 +39,17 @@
     width: 100%;
     .form_belt &{
       color: #484848;
+      @include media-tablet {
+        display: none;
+      }
     }
     & h2 {
       margin: 0;
       .form_belt &{
         font-size: 35px;
+        @include media-tablet-horizontal {
+          font-size: 24px;
+        }
       }
     }
     & p {
@@ -59,6 +71,10 @@
         .form_belt &{
           background-color: transparent;
           color: #00A3FF;
+          @include media-tablet-horizontal {
+            left: 0;
+            padding: 0;
+          }
         }
       }
       &:last-child {
@@ -94,12 +110,29 @@
     .form_belt &{
       grid-template-columns: repeat(3, auto);
       grid-template-rows: auto;
+      @include media-custom(1550px) {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        width: 100%;
+      }
+      @include media-tablet {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+      }
     }
     .form_vertical &{
       margin-top: 29px;
       grid-gap: 29px 0px;
       grid-template-columns: auto;
       grid-template-rows: auto auto auto;
+      @include media-tablet-horizontal {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+      }
+      @include media-mobile {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+      }
     }
     @include media-tablet-horizontal {
       grid-template-columns: repeat(1, auto);
@@ -114,10 +147,21 @@
     grid-column: span 1;
     .form_belt &{
       grid-column: span 1;
+      @include media-tablet {
+        grid-row: span 1;
+      }
     }
     .form_vertical &{
       grid-column: auto;
       grid-row: span 1;
+      @include media-tablet-horizontal {
+        grid-column: span 1;
+        grid-row: auto;
+      }
+      @include media-mobile {
+        grid-column: auto;
+        grid-row: span 1;
+      }
     }
     @include media-tablet-horizontal {
       grid-column: auto;
@@ -128,10 +172,25 @@
     grid-column: span 2;
     .form_belt &{
       grid-column: span 1;
+      @include media-custom(1550px) {
+        grid-column: span 2;
+      }
+      @include media-tablet {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
     }
     .form_vertical &{
       grid-column: auto;
       grid-row: span 1;
+      @include media-tablet-horizontal {
+        grid-column: span 2;
+        grid-row: auto;
+      }
+      @include media-mobile {
+        grid-column: auto;
+        grid-row: span 1;
+      }
     }
     @include media-tablet-horizontal {
       grid-column: auto;

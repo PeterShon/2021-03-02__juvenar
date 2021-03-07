@@ -6,6 +6,9 @@
   &__inner {
     padding: 94px 0 94px;
     grid-row-gap: 0;
+    @include media-tablet-horizontal {
+      padding: 80px 20px 40px;
+    }
   }
   &__title {
     grid-column: 1/-1;
@@ -14,6 +17,9 @@
     justify-content: center;
     width: 100%;
     color: #000;
+    @include media-mobile {
+      width: calc(100% - 20px);
+    }
     & h2 {
       display: flex;
       align-items: center;
@@ -31,5 +37,12 @@
     padding: 0 125px;
     grid-column: 1/-1;
     width: 100%;
+    @include media-tablet-horizontal {
+      padding: 0 0px;
+      margin-top: 60px;
+    }
+    @include media-mobile {
+      margin-top: 30px;
+    }
   }
 }

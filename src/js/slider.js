@@ -7,7 +7,6 @@ export function slider() {
     // Optional parameters
     loop: true, //бесконечные слайды
     slidesPerView: 3, //слайдов к показу
-    //spaceBetween: 73, //расстояние между слайдами
     slidesPerGroup: 1, //количество слайдов на свайп (соблюдать целочисленное деление perView/perGroup)
     shortSwipes: false, //включение/отключение функции короткого свайпа
     longSwipesMs: 70, //длительность длинного свайпа в МС
@@ -46,5 +45,27 @@ export function slider() {
     slidePrevClass: 'slider__item_prev',
     slideDuplicatePrevClass: 'slider__item_duplicate-prev',
     slideBlankClass: 'slider__item_invisible-blank',
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1, //слайдов к показу
+        centeredSlides: true, //активный слайд в центр
+      },
+      1024: {
+        slidesPerView: 2, //слайдов к показу
+        centeredSlides: true, //активный слайд в центр
+      },
+      1366: {
+        slidesPerView: 3, //слайдов к показу
+        spaceBetween: 50, //расстояние между слайдами
+      },
+      1550: {
+        spaceBetween: 100, //расстояние между слайдами
+      },
+      1650: {
+        spaceBetween: 400, //расстояние между слайдами
+      }
+    }
   })
+
 }

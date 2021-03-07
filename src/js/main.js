@@ -11,6 +11,8 @@ import { feedback } from '../js/feedback.js'
 import { animAppear } from '../js/anim-appear.js'
 import { tilt } from '../js/tilt.js'
 import { video } from '../js/video.js'
+import { map } from '../js/map.js'
+import { insta } from './insta.js'
 require(`../local_modules/choices.js/public/assets/scripts/choices.min`)
 require(`../local_modules/vanilla-tilt/dist/vanilla-tilt.min`)
 
@@ -30,4 +32,6 @@ function start() {
   animAppear()
   tilt()
   video()
+  map()
+  insta()
 }
