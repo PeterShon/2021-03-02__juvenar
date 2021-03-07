@@ -3448,7 +3448,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insta", function() { return insta; });
 /* insta */
 function insta() {
-  setTimeout(function () {
+  setTimeout(addDestroy, 400);
+  setTimeout(addDestroy, 1000);
+  setTimeout(addDestroy, 3000);
+  setTimeout(addDestroy, 10000);
+
+  function addDestroy() {
     if (document.querySelector('#eapps-instagram-feed-1')) {
       document.querySelector('#eapps-instagram-feed-1').lastChild.style.display = 'none';
     }
@@ -3456,7 +3461,7 @@ function insta() {
     if (document.querySelector('.eapps-link')) {
       document.querySelector('.eapps-link').style.display = 'none';
     }
-  }, 400);
+  }
 }
 
 /***/ }),
