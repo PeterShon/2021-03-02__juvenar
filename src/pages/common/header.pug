@@ -2,7 +2,7 @@ header.header.js_lock-padding
   .header__container.container
     .header__inner.inner
       //#top
-      a.header__logo(href="/?utm_source=istochnik&utm_medium=organic&utm_campaign=test_of_utm") 
+      a.header__logo(href="#top") 
         img.header__logo-img(src="./img/logo.png", alt="logo")
       .header__lang
         select#header__lang-select.header__lang-select.selecter(name="select")
@@ -33,7 +33,7 @@ header.header.js_lock-padding
                     each val, index in links
                       li
                         a.js_closer(href = val[0])= val[1]
-                a.burger__logo.js_closer(href="/?utm_source=istochnik&utm_medium=organic&utm_campaign=test_of_utm") 
+                a.burger__logo.js_closer(href="#top") 
                   img.burger__logo-img(src="./img/logo.png", alt="logo")
                 .burger__widgets
                   a.burger__whatsapp(href="https://wa.me/380951580858")  + 380 95 158 0858

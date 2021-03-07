@@ -35,6 +35,26 @@ export function popups() {
   }
 
   function popupOpen(curentPopup, curentButton) {
+    if (curentButton.classList.contains('slider-item__link')) {
+      let parent = curentButton.parentElement;
+      let img = parent.querySelector('img');
+      let src = img.getAttribute('src')
+      let mains = parent.querySelectorAll('.slider-item__main');
+      let info1 = mains[0].innerHTML;
+      let info2 = mains[1].innerHTML;
+      let info3 = mains[2].innerHTML;
+
+      let curentImg = curentPopup.querySelector('img');
+      let curentMains = curentPopup.querySelectorAll('.slider-item__main');
+      let curentInfo1 = curentMains[0];
+      let curentInfo2 = curentMains[1];
+      let curentInfo3 = curentMains[2];
+
+      curentImg.setAttribute('src', src);
+      curentInfo1.innerHTML = info1;
+      curentInfo2.innerHTML = info2;
+      curentInfo3.innerHTML = info3;
+    }
     if (curentPopup && unlock) {
       const popupActive = document.querySelector(".popup.open");
       if (popupActive) {

@@ -3670,6 +3670,25 @@ function popups() {
   }
 
   function popupOpen(curentPopup, curentButton) {
+    if (curentButton.classList.contains('slider-item__link')) {
+      var parent = curentButton.parentElement;
+      var img = parent.querySelector('img');
+      var src = img.getAttribute('src');
+      var mains = parent.querySelectorAll('.slider-item__main');
+      var info1 = mains[0].innerHTML;
+      var info2 = mains[1].innerHTML;
+      var info3 = mains[2].innerHTML;
+      var curentImg = curentPopup.querySelector('img');
+      var curentMains = curentPopup.querySelectorAll('.slider-item__main');
+      var curentInfo1 = curentMains[0];
+      var curentInfo2 = curentMains[1];
+      var curentInfo3 = curentMains[2];
+      curentImg.setAttribute('src', src);
+      curentInfo1.innerHTML = info1;
+      curentInfo2.innerHTML = info2;
+      curentInfo3.innerHTML = info3;
+    }
+
     if (curentPopup && unlock) {
       var popupActive = document.querySelector(".popup.open");
 
