@@ -1,6 +1,5 @@
 import { moveUp } from '../js/move-up.js'
 import { popups } from '../js/popups.js'
-import { parallax } from '../js/parallax.js'
 import { compare } from '../js/compare.js'
 import { burger } from '../js/burger.js'
 import { slider } from '../js/slider.js'
@@ -21,7 +20,6 @@ document.addEventListener(`DOMContentLoaded`, start())
 function start() {
   moveUp()
   popups()
-  parallax()
   compare()
   burger()
   slider()

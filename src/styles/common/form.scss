@@ -37,6 +37,9 @@
   }
   &__header {
     width: 100%;
+    .popup_feedback &{
+      text-align: center;
+    }
     .form_belt &{
       color: #484848;
       @include media-tablet {
@@ -67,6 +70,9 @@
           border-top-left-radius: 20px;
           left: auto;
           padding: 4px 7px 4px 15px;
+        }
+        .popup_feedback &{
+          border-top-left-radius: 0;
         }
         .form_belt &{
           background-color: transparent;
