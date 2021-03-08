@@ -1136,7 +1136,7 @@ select:-webkit-autofill:focus {
 }
 
 .main__sea-wrapper {
-  background: url(../img/bg-sea2.jpg), linear-gradient(to bottom, red, yellow) no-repeat center 78px/100%;
+  background: no-repeat center 75px/100% url(../img/bg-sea2.jpg), linear-gradient(to bottom, white 50%, #021728);
 }
 
 .container {
