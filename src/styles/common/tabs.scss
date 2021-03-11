@@ -33,7 +33,8 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(0, auto);
+  grid-auto-rows: auto;
+  margin-bottom: 150px;
   &__tab-road {
     grid-column: 1/-1;
     display: flex;

@@ -1136,7 +1136,7 @@ select:-webkit-autofill:focus {
 }
 
 .main__sea-wrapper {
-  background: no-repeat center 75px/100% url(../img/bg-sea2.jpg), linear-gradient(to bottom, white 50%, #021728);
+  background: no-repeat center/cover url(../img/bg-sea2.jpg), linear-gradient(to bottom, white 50%, #021728);
 }
 
 .container {
@@ -1161,6 +1161,10 @@ select:-webkit-autofill:focus {
   /*header - lang*/
   /*header - nav*/
   /*header - widgets*/
+}
+
+.header_onscroll {
+  background: linear-gradient(180deg, #A3DCFF 70%, rgba(163, 220, 255, 0) 181.2%);
 }
 
 .header__conteiner {
@@ -4706,7 +4710,8 @@ select:-webkit-autofill:focus {
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(0, auto);
+  grid-auto-rows: auto;
+  margin-bottom: 150px;
 }
 
 .tabs__tab-road {
@@ -5717,6 +5722,18 @@ input:-webkit-autofill + .input__placeholder::before {
 }
 
 ._an-i._an-up._a {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+._an-i._an-right {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.6s;
+  transition-timing-function: cubic-bezier(0.78, 0.22, 0.72, 0.63);
+}
+
+._an-i._an-right._a {
   transform: translateY(0%);
   opacity: 1;
 }

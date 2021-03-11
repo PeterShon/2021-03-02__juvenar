@@ -15,6 +15,7 @@ export function tabs() {
         button.addEventListener('click', setStatus)
 
         function setStatus() {
+          field.style.height = field.clientHeight + 'px';
           if (!(field.classList.contains('tabs_spoiler'))) {
             field.querySelector('.tabs__tab_active').classList.remove('tabs__tab_active')
             field.querySelector('.tabs__item-body_active').classList.remove('tabs__item-body_active')

@@ -8,3 +8,13 @@
     opacity: 1;
   }
 }
+._an-i._an-right {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.6s;
+  transition-timing-function: cubic-bezier(.78,.22,.72,.63);
+  &._a {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
