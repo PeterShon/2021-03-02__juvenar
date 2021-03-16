@@ -1535,10 +1535,6 @@ select:-webkit-autofill:focus {
 
 .promo-section {
   position: relative;
-  /*background-image: url(../img/bg-sea.webp);
-  background-position: center -70px;
-  background-repeat: no-repeat;
-  background-size: cover;*/
   overflow: hidden;
 }
 
@@ -1676,6 +1672,23 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media (max-width: 1024px) {
+  .promo-section__description {
+    width: 66%;
+  }
+
+  .promo-section__description > p {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 960px) {
+  .promo-section__description {
+    position: relative;
+    z-index: 20;
+  }
+}
+
 @media (max-width: 767px) {
   .promo-section__description {
     padding: 5px;
@@ -1716,6 +1729,12 @@ select:-webkit-autofill:focus {
     opacity: 0.9;
     top: 25%;
     width: 53%;
+  }
+}
+
+@media (max-width: 960px) {
+  .promo-section__feedback {
+    top: 26%;
   }
 }
 
@@ -2030,7 +2049,17 @@ select:-webkit-autofill:focus {
   .promo-section__product {
     z-index: 1;
     right: -16%;
-    top: 22%;
+    top: 12%;
+    width: 664px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 960px) {
+  .promo-section__product {
+    z-index: 1;
+    right: -21%;
+    top: 12%;
     width: 664px;
     height: 600px;
   }

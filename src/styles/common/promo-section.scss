@@ -1,9 +1,5 @@
 .promo-section {
   position: relative;
-  /*background-image: url(../img/bg-sea.webp);
-  background-position: center -70px;
-  background-repeat: no-repeat;
-  background-size: cover;*/
   overflow: hidden;
   @include media-tablet {
     background: #adf;
@@ -100,6 +96,16 @@
     @include media-laptop {
       width: 100%;
     }
+    @include media-tablet-horizontal {
+      width: 66%;
+      & > p {
+        font-size: 26px;
+      }
+    }
+    @include media-custom(960px) {
+      position: relative;
+      z-index: 20;
+    }
     @include media-tablet {
       padding: 5px;
       margin-top: 0;
@@ -128,6 +134,9 @@
       opacity: 0.9;
       top: 25%;
       width: 53%;
+    }
+    @include media-custom(960px) {
+      top: 26%;
     }
     @include media-tablet {
       width: 100%;
@@ -351,7 +360,14 @@
     @include media-tablet-horizontal {
       z-index: 1;
       right: -16%;
-      top: 22%;
+      top: 12%;
+      width: 664px;
+      height: 600px;
+    }
+    @include media-custom(960px) {
+      z-index: 1;
+      right: -21%;
+      top: 12%;
       width: 664px;
       height: 600px;
     }
